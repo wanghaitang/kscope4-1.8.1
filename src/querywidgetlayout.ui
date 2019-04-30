@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>QueryWidgetLayout</class>
+  <widget class="QWidget" name="QueryWidgetLayout">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>740</width>
+        <height>343</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Form2</string>
+    </property>
+    <layout class="QHBoxLayout">
+      <property name="margin">
+        <number>0</number>
+      </property>
+      <property name="spacing">
+        <number>0</number>
+      </property>
+      <item>
+        <widget class="TabWidget" name="m_pQueryTabs"/>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11"/>
+  <customwidgets>
+    <customwidget>
+      <class>TabWidget</class>
+      <extends>QWidget</extends>
+      <header location="local">tabwidget.h</header>
+      <sizehint>
+        <width>-1</width>
+        <height>-1</height>
+      </sizehint>
+      <container>1</container>
+      <sizepolicy>
+        <hordata>7</hordata>
+        <verdata>7</verdata>
+      </sizepolicy>
+      <pixmap>image0</pixmap>
+    </customwidget>
+  </customwidgets>
+  <includes>
+    <include location="local">tabwidget.h</include>
+  </includes>
+</ui>

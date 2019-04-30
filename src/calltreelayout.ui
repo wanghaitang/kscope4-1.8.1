@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>CallTreeLayout</class>
+  <widget class="QWidget" name="CallTreeLayout">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>695</width>
+        <height>578</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Call Graph</string>
+    </property>
+    <layout class="QVBoxLayout">
+      <item>
+        <layout class="QHBoxLayout">
+          <item>
+            <widget class="QGroupBox" name="m_pViewGroup">
+              <property name="flat">
+                <bool>true</bool>
+              </property>
+              <layout class="QHBoxLayout">
+                <property name="margin">
+                  <number>0</number>
+                </property>
+                <item>
+                  <widget class="QToolButton" name="m_pGraphButton">
+                    <property name="autoExclusive">
+                      <bool>true</bool>
+                    </property>>
+                    <property name="text">
+                      <string>...</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>true</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Call Graph</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QToolButton" name="m_pCalledButton">
+                    <property name="autoExclusive">
+                      <bool>true</bool>
+                    </property>>
+                    <property name="text">
+                      <string>...</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>true</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Called Functions Tree</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QToolButton" name="m_pCallingButton">
+                    <property name="autoExclusive">
+                      <bool>true</bool>
+                    </property>>
+                    <property name="text">
+                      <string>...</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>true</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Calling Functions Tree</string>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </item>
+          <item>
+            <widget class="Line" name="line1">
+              <property name="frameShape">
+                <enum>QFrame::VLine</enum>
+              </property>
+              <property name="frameShadow">
+                <enum>QFrame::Sunken</enum>
+              </property>
+            </widget>
+          </item>
+          <item>
+            <widget class="QGroupBox" name="m_pGraphGroup">
+              <property name="flat">
+                <bool>true</bool>
+              </property>
+              <layout class="QHBoxLayout">
+                <property name="margin">
+                  <number>0</number>
+                </property>
+                <item>
+                  <widget class="QToolButton" name="m_pSaveButton">
+                    <property name="text">
+                      <string>a</string>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Save As...</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QToolButton" name="m_pZoomInButton">
+                    <property name="text">
+                      <string>a</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>false</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Zoom In</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QToolButton" name="m_pZoomOutButton">
+                    <property name="text">
+                      <string>a</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>false</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Zoom Out</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QToolButton" name="m_pRotateButton">
+                    <property name="text">
+                      <string>a</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>false</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Rotate</string>
+                    </property>
+                  </widget>
+                </item>
+                <item>
+                  <widget class="QToolButton" name="m_pPrefButton">
+                    <property name="text">
+                      <string>a</string>
+                    </property>
+                    <property name="checkable">
+                      <bool>false</bool>
+                    </property>
+                    <property name="autoRaise">
+                      <bool>true</bool>
+                    </property>
+                    <property name="toolTip" stdset="0">
+                      <string>Preferences</string>
+                    </property>
+                  </widget>
+                </item>
+              </layout>
+            </widget>
+          </item>
+          <item>
+            <spacer name="spacer2">
+              <property name="sizeHint">
+                <size>
+                  <width>110</width>
+                  <height>21</height>
+                </size>
+              </property>
+              <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+        </layout>
+      </item>
+      <item>
+        <widget class="QStackedWidget" name="m_pStack">
+          <property name="sizePolicy">
+            <sizepolicy>
+              <hsizetype>7</hsizetype>
+              <vsizetype>7</vsizetype>
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+            </sizepolicy>
+          </property>
+          <widget class="QWidget" name="WStackPage0">
+            <attribute name="id">
+              <number>0</number>
+            </attribute>
+            <layout class="QVBoxLayout">
+              <property name="margin">
+                <number>0</number>
+              </property>
+              <item>
+                <widget class="GraphWidget" name="m_pGraphWidget"/>
+              </item>
+            </layout>
+          </widget>
+          <widget class="QWidget" name="WStackPage1">
+            <attribute name="id">
+              <number>1</number>
+            </attribute>
+            <layout class="QVBoxLayout">
+              <property name="margin">
+                <number>0</number>
+              </property>
+              <item>
+                <widget class="TreeWidget" name="m_pCalledWidget"/>
+              </item>
+            </layout>
+          </widget>
+          <widget class="QWidget" name="WStackPage2">
+            <attribute name="id">
+              <number>2</number>
+            </attribute>
+            <layout class="QVBoxLayout">
+              <property name="margin">
+                <number>0</number>
+              </property>
+              <item>
+                <widget class="TreeWidget" name="m_pCallingWidget"/>
+              </item>
+            </layout>
+          </widget>
+        </widget>
+      </item>
+      <item>
+        <widget class="QLabel" name="m_pHelpLabel">
+          <property name="text">
+            <string>Help Message</string>
+          </property>
+          <property name="wordWrap">
+            <bool>false</bool>
+          </property>
+        </widget>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11"/>
+  <customwidgets>
+    <customwidget>
+      <class>GraphWidget</class>
+      <extends>QWidget</extends>
+      <sizehint>
+        <width>-1</width>
+        <height>-1</height>
+      </sizehint>
+      <container>0</container>
+      <sizepolicy>
+        <hordata>7</hordata>
+        <verdata>7</verdata>
+      </sizepolicy>
+      <pixmap>image0</pixmap>
+    </customwidget>
+    <customwidget>
+      <class>TreeWidget</class>
+      <extends>QWidget</extends>
+      <header location="local">treewidget.h</header>
+      <sizehint>
+        <width>-1</width>
+        <height>-1</height>
+      </sizehint>
+      <container>0</container>
+      <sizepolicy>
+        <hordata>7</hordata>
+        <verdata>7</verdata>
+      </sizepolicy>
+      <pixmap>image0</pixmap>
+    </customwidget>
+  </customwidgets>
+  <includes>
+    <include location="local">graphwidget.h</include>
+    <include location="local">treewidget.h</include>
+  </includes>
+  <connections>
+    <connection>
+      <sender>m_pPrefButton</sender>
+      <signal>clicked()</signal>
+      <receiver>CallTreeLayout</receiver>
+      <slot>slotPrefClicked()</slot>
+    </connection>
+    <connection>
+      <sender>m_pRotateButton</sender>
+      <signal>clicked()</signal>
+      <receiver>CallTreeLayout</receiver>
+      <slot>slotRotateClicked()</slot>
+    </connection>
+    <connection>
+      <sender>m_pZoomOutButton</sender>
+      <signal>clicked()</signal>
+      <receiver>CallTreeLayout</receiver>
+      <slot>slotZoomOutClicked()</slot>
+    </connection>
+    <connection>
+      <sender>m_pZoomInButton</sender>
+      <signal>clicked()</signal>
+      <receiver>CallTreeLayout</receiver>
+      <slot>slotZoomInClicked()</slot>
+    </connection>
+    <connection>
+      <sender>m_pSaveButton</sender>
+      <signal>clicked()</signal>
+      <receiver>CallTreeLayout</receiver>
+      <slot>slotSaveClicked()</slot>
+    </connection>
+  </connections>
+</ui>

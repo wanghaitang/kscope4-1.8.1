@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0" stdsetdef="1">
+  <author></author>
+  <comment></comment>
+  <exportmacro></exportmacro>
+  <class>BookmarksLayout</class>
+  <widget class="QDialog" name="BookmarksLayout">
+    <property name="geometry">
+      <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>600</width>
+        <height>480</height>
+      </rect>
+    </property>
+    <property name="windowTitle">
+      <string>Global Bookmarks</string>
+    </property>
+    <layout class="QVBoxLayout">
+      <item>
+        <widget class="QueryView" name="m_pView"/>
+      </item>
+      <item>
+        <widget class="Line" name="line1">
+          <property name="frameShape">
+            <enum>QFrame::HLine</enum>
+          </property>
+          <property name="frameShadow">
+            <enum>QFrame::Sunken</enum>
+          </property>
+        </widget>
+      </item>
+      <item>
+        <layout class="QHBoxLayout">
+          <item>
+            <spacer name="spacer1">
+              <property name="sizeHint">
+                <size>
+                  <width>291</width>
+                  <height>21</height>
+                </size>
+              </property>
+              <property name="sizeType">
+                <enum>QSizePolicy::Expanding</enum>
+              </property>
+              <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+              </property>
+            </spacer>
+          </item>
+          <item>
+            <widget class="QPushButton" name="m_pCloseButton">
+              <property name="text">
+                <string>Close</string>
+              </property>
+              <property name="shortcut">
+                <string/>
+              </property>
+            </widget>
+          </item>
+        </layout>
+      </item>
+    </layout>
+  </widget>
+  <layoutdefault spacing="6" margin="11"/>
+  <customwidgets>
+    <customwidget>
+      <class>QueryView</class>
+      <extends>QWidget</extends>
+      <header location="local">queryview.h</header>
+      <sizehint>
+        <width>-1</width>
+        <height>-1</height>
+      </sizehint>
+      <container>0</container>
+      <sizepolicy>
+        <hordata>5</hordata>
+        <verdata>5</verdata>
+      </sizepolicy>
+      <pixmap>image0</pixmap>
+    </customwidget>
+  </customwidgets>
+  <includes>
+    <include location="local">queryview.h</include>
+  </includes>
+  <connections>
+    <connection>
+      <sender>m_pCloseButton</sender>
+      <signal>clicked()</signal>
+      <receiver>BookmarksLayout</receiver>
+      <slot>reject()</slot>
+    </connection>
+  </connections>
+</ui>
